@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Works</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <ul class="menu">
+                    <li>
+                        <a href="/blogs">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/works" class="active">Works</a>
+                    </li>
+                    <li>
+                        <a href="/">Contacts</a>
+                    </li>
+                </ul>
+                <button class="burger" onclick="toggleMenu()">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </header>
+
+            <section class="works">
+                <div class="container">
+                    <div class="works-header">
+                        <h1>Work</h1>
+                    </div>
+
+                    {{#each works}}
+                    <div class="works-card-container">
+                        <img src="../img/works/{{this.image}}" alt="{{this.image}}"/>
+                        <div class="works-card-description">
+                            <h3>{{this.header}}</h3>
+                            <div class="description">
+                                <div class="date">{{this.year}}</div>
+                                <div class="tag">{{this.tag}}</div>
+                            </div>
+                            <p>{{this.text}}</p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <div class="vk"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="ok"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="tg"></div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <p>Copyright ©2020 All rights reserved</p>
+        </footer>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
